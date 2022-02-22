@@ -9,7 +9,7 @@ export class UserResolver {
   constructor(private readonly userService: UserService) {}
 
   @Mutation(() => User)
-  async regiseterUser(@Args('input') input: CreateUserInput) {
+  async registerUser(@Args('input') input: CreateUserInput) {
     return this.userService.createUser(input);
   }
 

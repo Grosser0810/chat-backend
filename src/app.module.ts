@@ -15,6 +15,9 @@ import { decode } from './utils/jwt.utils';
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
       installSubscriptionHandlers: true,
+      cors: {
+        credential: true,
+      },
       context: ({ req, res }) => {
         const token = get(req, 'cookies.token');
         const user = token ? decode(token) : null;

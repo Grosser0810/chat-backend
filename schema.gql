@@ -20,7 +20,7 @@ input LoginInput {
 }
 
 type Mutation {
-  regiseterUser(input: CreateUserInput!): User!
+  registerUser(input: CreateUserInput!): User!
   confirmUser(input: ConfirmUserInput!): User!
 }
 
